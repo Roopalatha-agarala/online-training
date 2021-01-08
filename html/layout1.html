@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<title>layout preparation</title>
+<style>
+    #maincontainer{
+        border:1px solid red;
+        padding: 100 px;
+
+
+    }
+    .menus li{
+        flex:1;
+        margin-right: 40px;
+        margin-left:400px;
+        margin-top: 80px;
+        
+    }
+    .image{
+        display:flex;
+        border:1px solid rgb(114, 5, 5);
+        background-color: chocolate;
+    
+        
+        padding: 20px;
+
+    }
+    .imgdress{
+        flex: 1;
+         margin-right: 10px;
+
+
+        
+    }
+    .content{
+        display: flex;
+
+     }
+     .content div{
+         flex: 1;
+         border: 1px solid red;
+         background-color:pink ;
+         height: 220px;
+     }
+     .mc{
+         flex: 3 !important;
+         background-color:hotpink !important; text-align: center; 
+         }
+</style>
+</head>
+<body>
+    <div id="maincontainer">
+
+        <div style="display:flex; padding:25px 30px 30px 30px; height: 100px; background-color:rosybrown;">
+            <h1 style="font-style:oblique; font-size: 60px; color: rgb(32, 1, 32);  ">AKIRA's</h1>
+            
+            <div>
+                <ul style="display:flex;" class="menus">
+                    <li>SEARCH</li>
+                    <li> MENU</li>
+                </ul>
+            </div>
+        </div>
+        <div class="image">
+            <div class="imgdress">
+                <image src="dress1.jpg">
+            </div>
+            <div class="imgdress">
+                <image src="dress2.jpg">
+            </div>
+            <div class="imgdress">
+                <image src="dress3.jpg">
+            </div>
+            <div class="imgdress">
+                <image src="dress4.jpg">
+            </div>
+            <div class="imgdress">
+                <image src="dress5.jpg">
+            </div> 
+
+
+
+        </div>
+        <div class="content">
+            <div >
+                <img src="adv1.jpg" style="width:210px; height:200px; padding-left:20px;">
+            </div>
+            <div class="mc">
+                <img src="discount.jpg" style="width: 700px; height:200px;">
+            </div>
+            <div>
+                <img src="adv2.jpg" style="width:210px; height:210px; padding-left: 20px;">
+            </div>
+        </div>
+        <div style="padding: 25px; background:rosybrown; color:rgb(32, 1, 32);">
+            <h3>SHOP FOR</h3>
+            <P>Explore | men | women | kids | Home & living</P>    
+        </div>
+    </div>
+</body>
+</html>
