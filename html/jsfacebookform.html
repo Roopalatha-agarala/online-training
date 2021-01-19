@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+    <head>
+        <title>facebook page form</title>
+        <style>
+            .maincontainer{
+                border: 2px solid lightgrey;
+                padding: 20px;
+                margin-right: 1140px;
+            }
+            div button{
+                background-color: green;
+                border:none;
+                padding:5px 30px 5px 30px;
+                color:white;
+                text-align:center;
+                text-decoration: none;
+                margin-left: 100px;
+            }
+            #teloremail{
+                width:97%;
+                background-color:lightgrey ;
+            }
+            #pwd{
+                width:97%;
+                background-color: lightgrey;
+            }
+            #fname{
+                background-color: lightgrey;
+            }
+            #surname{
+                background-color: lightgrey;
+            }
+            
+            
+            div select{
+                width:32.3%;
+            }
+            #gend{
+                width:15%;
+                
+            }
+            b{
+                color:blue;
+
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h2>Sign Up</h2>
+        <p>it's quick and easy </p>
+        <form>
+            <div class="maincontainer">
+                
+            <label for="fname"></label>
+            <input type="text" name="fname" id="fname" placeholder="First name">
+            <label for="surname"></label>
+            <input type="text" name="surname" id="surname" placeholder="surname"><br><br>
+            
+            <div class="adress">
+            <label for="tel or email"></label>
+            <input type="text" name="tel or email" id="teloremail" placeholder="Mobilenumber or email adress"><br><br>
+            
+            
+            <label for="pwd"></label>
+            <input type="password" name="pwd" id="pwd" placeholder="Password"><br><br>
+            
+
+            <label>Date of birth</label><br>
+            <select><option value="month">month</option></select>
+            <select><option value="date">date</option></select>
+            <select><option value="year">year</option></select><br><br>
+            <label>Gender </label><br>
+            <label for="gend"> </label>
+            <input type="radio" name="gend" id="gend">male
+            <label for="gend"></label> 
+            <input type="radio" name="gend" id="gend">female
+            <label for="gend"></label> 
+            <input type="radio" name="gend" id="gend">custom
+            
+            <br><p>By cliking Sign Up,you agree to our <b>Terms, Data policy</b> and <b>Cookie Policy</b>.You may recieve SMS notification from us and can opt out at any time.</p>
+                
+                <button type="submit" onclick="validateLogin(event)">signup</button>
+            </div>
+            
+
+        </form>
+
+
+        <script>
+            function validateLogin(e){
+                //prevent default from submission
+                e.preventDefault();
+                //declaration
+                let fname, surname, teloremail, pwd, gend;
+                //assignment
+                fname = document.getElementById('fname').value;
+                surname = document.getElementById('surname').value;
+                teloremail = document.getElementById('teloremail').value;
+                pwd = document.getElementById('pwd').value;
+                gend= document.getElementById('gend').value;
+
+                if(fname == ''){
+                    //alert('please enter username!');
+                     document.getElementById('fname').style.border = '1px solid red';
+                     document.getElementById('surname').style.border = '1px solid green';
+                     
+                }else if(surname == ''){
+                    document.getElementById('fname').style.border = '1px solid green';
+  
+                     document.getElementById('surname').style.border = '1px solid red';
+                     
+                }else if(teloremail == ''){
+                    document.getElementById('teloremail').style.border = '1px solid red';
+                   
+                }else if(pwd == ''){
+                    document.getElementById('pwd').style.border = '1px solid red';
+
+                }else if(gend == ''){
+                    document.getElementById('gend').style.border = '1px solid red';
+                }
+
+                else{
+                    document.form.login.submit();
+                }
+
+
+            }
+
+        </script>
+    </body>
+
+</html>

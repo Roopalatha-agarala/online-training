@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+    
+    <script>
+        //display even numbers between 1 to 100
+        document.write('even numbers between 1 to 100 :<br>')
+        for(i=2; i<=100; i += 2)
+        document.write(+i+ '<br>');
+
+    //display odd numbers between 1 to 100
+        document.write('odd numbers between 1 to 100: <br>')
+        for(i=1; i<=100; i += 2)
+        document.write(+i+ '<br>');
+
+    //right angle star pattern
+        document.write('right angle star pattern:<br>')
+        var rows=5;
+        for(var i=1; i<=rows; i++)
+        {
+            for(var j=1; j<=i; j++)
+            
+            {
+            document.write("*");
+            }
+
+        
+        document.write('<br>')}
+
+
+    //to check a given number is even or odd
+        document.write('to check whether the number is even or odd :<br>')
+        var x;
+        for(var x=0; x<=100; x++)
+        {
+            if(x%2==0)
+            {
+                document.write(+x+ 'is even<br>')
+            }
+            else
+            {
+                document.write(+x+ 'is odd <br>' )
+            }
+        }
+
+
+    //fibonacci series from 1 to 100 display
+       document.write('display of fibonacci series from 1 to 100:<br>')
+        var a, b, result;
+        a=0;
+        b=1;
+        result=b;
+
+        for(var i=0; result<=100; i++ ){
+            document.write(result+ '<br>');
+            result=a+b;
+            a=b;
+            b=result;
+        }
+    
+    //the given year is a leap or not
+    document.write("the year is a leap year or not:<br>")
+     var year = 2014;
+    
+    
+        if((year % 4 ==0)&&(year % 100  != 0 ) || (year % 400 == 0)){
+        document.write(year+ 'is  a leap year<br>');
+        }
+        else
+        {
+        document.write(year+ 'is not a leap year<br>');
+     
+    
+        }
+
+    //to convert temperature from celcius to fahrenheit
+    document.write('covert the temperature from celcius to fahrenheit:<br>')
+    var htemp = 80;
+    var ctemp = (htemp-32)/1.8;
+    document.write('temperature in celcius:'+ctemp+ '<br>') ;  
+    document.write('temperature in fahrenheit:'+htemp+ '<br>');
+
+    //check whether a given integer is within 20 and 100
+    document.write('check whether the integer is between 20 and 100:<br>')
+    var x = 14;
+    if((x>=20)&&(x<=100)){
+        document.write(+x+' is between 20 and 100<br>');
+    }
+    else{
+        document.write(+x+ 'is not between 20 and 100<br>')
+    }
+
+    //write a program to check two given numbers and return true if one of the number is 50 or their sum is 50
+   // document.write("to check one of the no is 50 or their sum is 50 ")
+    //var x,y;
+   // x=a;y=b;
+    //a=50;
+    //b=25;
+    
+   // if((x==50||y==50)||(x+y==50)){
+
+      //  return true;
+  //  }
+   // else {
+   //     return false;
+    //}
+    
+    //to check whether pineapple is present in an array
+    document.write('to check whether pineapple is present in an array:<br>')
+    let fruits= ["banana","apple","pomegranate","pineapple","orange"];
+    document.write(fruits.includes("pineapple"));
+    //document.write("n");
+    
+    //to check the number is palindrome or not
+    let str='madam';
+    let revstr='';
+
+    for(let i=str.length-1;i>=0;i--){
+        revstr +=str[i];
+    }
+    if(str===revstr){
+        alert('given string is palindrome')
+    }
+    else{
+        alert('given string is not palindrome');
+
+    }
+    alert(revstr);
+
+    
+           
+       
+    </script>    
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <title>js-validations</title>
+
+    </head>
+    <body>
+        <form name="validation-form" action="" onsubmit="return validateForm()" method="POST">
+            <label for="fname">first name</label>
+            <input type="text" name="fname"placeholder="first name" minlength="4" maxlength="10"><br><br>
+            <label for="lname">last name</label>
+            <input type="text" name="lname" placeholder="last name"  minlength="4" maxlength="10"><br><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="email"  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" > <br><br>
+            <label for="phoneno">phone no</label>
+            <input type="tel" name="phoneno" placeholder="phone no" minlength="10" maxlength="10" pattern="((((\+)91){1})? ?-?[9876]{1}[0-9]{9})" ><br><br>
+            <label for="pwd">password</label>
+            <input type="password" name="pwd" placeholder="password" minlength="8" maxlength="14" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@*&]).{8,}" ><br><br>
+            <input type="submit" onclick="validateForm()" value="submit">
+              
+
+        </form>
+
+
+        <script>
+            function validateForm(){
+                var fname = document.forms["validate-form"]["fname"].value;
+                var lname = document.forms["validate-form"]["lname"].value;
+                var email = document.forms["validate-form"]["email"].value;
+                var phoneno = document.forms["validate-form"]["phoneno"].value;
+                var pwd = document.forms["validate-form"]["pwd"].value;
+                if( fname == "" ){
+                    alert("please Enter First Name");
+                   // return false
+                }else if( lname == "" ){
+                    alert("please Enter Last Name");  
+                    //return false
+                
+                }else if( email == "" ){
+                    alert("please Enter Email");
+                    //return false
+                }else if( phoneno == "" ){
+                    alert("please Enter Phoneno");
+                   // return false
+                } else if( pwd == "" ){
+                    alert("please Enter Password");
+                   // return false
+                } else{
+                    alert("Form Submitted Successfully");  
+                }
+                return false
+            }  
+        </script>
+    </body>
+</html>
